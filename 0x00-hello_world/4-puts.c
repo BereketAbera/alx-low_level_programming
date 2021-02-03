@@ -1,7 +1,10 @@
 #include <stdio.h>
 
-/*
- * prints a string to the standard output
+/**
+ * main - The function prints a string to the standard output
+ *
+ * section header: Section description
+ * Return: Retruns integer to signify success or failure
  */
 int main(void)
 {

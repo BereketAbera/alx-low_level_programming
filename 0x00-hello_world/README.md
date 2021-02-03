@@ -7,4 +7,5 @@ will perform steps upto compilation
 ## gcc -S
 will perfom steps upto assembly
 
-
+## puts
+is a c function found in header file stdio that prints to the standard output

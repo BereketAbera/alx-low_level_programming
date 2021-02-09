@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * _abs - returns the absolute value of the number 
+ * _abs - returns the absolute value of the numbe
  * @n: the integer to test
  *
- * Return: integer 1 if value is lower and 0 otherwise
+ * Return: absolute value
  */
 int _abs(int n)
 {

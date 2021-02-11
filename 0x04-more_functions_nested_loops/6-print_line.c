@@ -16,4 +16,3 @@ void print_line(int i)
 	}
 	_putchar('\n');
 }
-

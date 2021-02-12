@@ -17,7 +17,7 @@ void more_numbers(void)
 			int k = i <= 9 ? i : 1;
 
 			_putchar('0' + k);
-			if (i >= 9)
+			if (i > 9)
 			{
 				_putchar('0' + i % 10);
 			}

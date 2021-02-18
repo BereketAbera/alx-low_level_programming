@@ -13,6 +13,12 @@ char *cap_string(char *s)
 
 	while (s[l] != '\0')
 	{
+		if (cap && s[l] >= 97 && s[l] < 97 + 26)
+		{
+			s[l] = s[l] - 32;
+			cap = 0;
+		} else
+			cap = 0;
 		for (i = 0; i < 13; i++)
 		{
 			if (s[l] == separators[i])
@@ -21,12 +27,6 @@ char *cap_string(char *s)
 				break;
 			}
 		}
-		if (cap && s[l] >= 97 && s[l] < 97 + 26)
-		{
-			s[l] = s[l] - 32;
-			cap = 0;
-		} else if (s[l] >= 65 && s[l] <= 90)
-			cap = 0;
 		l++;
 	}
 	return (s);

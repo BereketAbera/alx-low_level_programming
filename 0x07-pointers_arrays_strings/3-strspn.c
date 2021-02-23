@@ -52,7 +52,7 @@ char *removeChar(char s[], int i)
 {
 	int j = 0;
 	int temp = i;
-	static char t[10];
+	static char t[100];
 
 	i = 0;
 	while (s[j] != '\0')

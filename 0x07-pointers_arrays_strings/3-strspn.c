@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-
 char *removeChar(char s[], int i);
 
 /**

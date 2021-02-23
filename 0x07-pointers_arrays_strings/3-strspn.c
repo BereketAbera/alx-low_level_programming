@@ -30,7 +30,6 @@ unsigned int _strspn(char s[], char accept[])
 		if (found)
 		{
 			accept = removeChar(accept, i);
-			printf("%s\n", accept);
 		}
 		l++;
 	}

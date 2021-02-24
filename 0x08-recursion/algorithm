@@ -1,0 +1,24 @@
+
+-> compare to string the second string can contain a wild card *
+	- recurrsively go through both strings and keep track of their index
+	- compare each characters and if they are the same continue to the next
+	  but if they are different return 0
+	- for the second string, if you find a wild card stop incrementing the index and set iss2wild to true
+	- but if you find a match with the next index of the second string with later 
+	  indexes of the first string continue incremeneting second strings index and set iss2wild to false
+	- while you are not incrementing and you do not have a match with next character of the second string
+	  assume the characters are the same and continue
+	- if you reach the end of both strings return 1
+
+
+eg.
+s1 = main.c & s2 = *.c
+start => s1i = 0 & s2i = 0
+	 iss2wild = true;
+	 wildindex = 0;
+	 s1[0] == s2[wildindex + 1] => false;
+	 s1[1] == s2[wildindex + 1] => false;
+	 s2[2] == s2[wildindex + 1] => false;
+	 s2[3] == s2[wildindex + 1] => false;
+	 s2[4] == s2[wildindex + 1] => true; increment both of them and set iss2wild = false;
+         s2[5] == s2[2] => true;

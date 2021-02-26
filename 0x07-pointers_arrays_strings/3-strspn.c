@@ -1,5 +1,3 @@
-char *removeChar(char s[], int i);
-
 /**
  * _strspn - find number of charaters not found in accept
  * @s: the pointer to search the charaters from
@@ -7,64 +5,25 @@ char *removeChar(char s[], int i);
  *
  * Return: number of not found characters
  */
-unsigned int _strspn(char s[], char accept[])
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int l = 0;
-	int i, found;
-	int ln = 0;
+	int i = 0;
+	unsigned int count = 0;
+	int j;
 
-	while (s[ln] != '\0')
-		ln++;
-	while (s[l] != '\0')
+	while (*(s + i) != '\n' && *(s + i) != ' ')
 	{
-		i = 0;
-		found = 0;
-		if (accept[i] == '\0')
-			break;
-		while (accept[i] != '\0' && i <= ln)
+		j = 0;
+		while (*(accept + j) != '\0')
 		{
-			if (accept[i] == s[l])
+			if (*(s + i) == *(accept + j))
 			{
-				found = 1;
+				count++;
 				break;
 			}
-			i++;
-		}
-		if (found)
-		{
-			accept = removeChar(accept, i);
-		}
-		l++;
-	}
-	return (l);
-}
-
-
-/**
- * removeChar - romoves char
- * @s: a string to remove char from
- * @i: the index to remove the char from
- *
- * Return: the string with the removed char
- */
-char *removeChar(char s[], int i)
-{
-	int j = 0;
-	int temp = i;
-	static char t[100];
-
-	i = 0;
-	while (s[j] != '\0')
-	{
-		if (i == temp)
-		{
 			j++;
-			continue;
 		}
-		t[i] = s[j];
-		j++;
 		i++;
 	}
-	t[i] = '\0';
-	return (t);
+	return (count);
 }

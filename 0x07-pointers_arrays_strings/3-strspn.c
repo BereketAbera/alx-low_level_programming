@@ -11,14 +11,17 @@ unsigned int _strspn(char s[], char accept[])
 {
 	unsigned int l = 0;
 	int i, found;
+	int ln = 0;
 
+	while (s[ln] != '\0')
+		ln++;
 	while (s[l] != '\0')
 	{
 		i = 0;
 		found = 0;
 		if (accept[i] == '\0')
 			break;
-		while (accept[i] != '\0')
+		while (accept[i] != '\0' && i <= ln)
 		{
 			if (accept[i] == s[l])
 			{

@@ -7,7 +7,7 @@ char *removeChar(char s[], int i);
  *
  * Return: number of not found characters
  */
-unsigned int _strspn(char s[], char accept[])
+unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int l = 0;
 	int i, found;
@@ -47,7 +47,7 @@ unsigned int _strspn(char s[], char accept[])
  *
  * Return: the string with the removed char
  */
-char *removeChar(char s[], int i)
+char *removeChar(char *s, int i)
 {
 	int j = 0;
 	int temp = i;

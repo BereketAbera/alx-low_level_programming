@@ -38,13 +38,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = new_node;
 		return (*head);
 	}
-	temp_head = malloc(sizeof(list_t));
-	if (temp_head == NULL)
-	{
-		free(new_node);
-		free(temp_head);
-		return (NULL);
-	}
 	temp_head = *head;
 	while (temp_head->next != NULL)
 		temp_head = temp_head->next;

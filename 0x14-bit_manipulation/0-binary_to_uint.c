@@ -15,7 +15,7 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	while (b[len] != '\0')
 		len++;
-	
+
 	while (len != 0)
 	{
 		if (b[len - 1] != '0' && b[len - 1] != '1')
@@ -47,6 +47,7 @@ unsigned int binary_to_uint(const char *b)
 unsigned int _pow(unsigned int a, unsigned int b)
 {
 	unsigned int total = a;
+
 	if (b == 0)
 		return (1);
 	while (b > 1)
